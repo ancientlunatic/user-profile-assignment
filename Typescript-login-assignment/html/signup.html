@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .signup {
+            padding: 50px;
+            margin: 50px auto;
+            border: 2px solid cadetblue;
+            border-radius: 25px;
+            height: auto;
+            width: 50%;
+        }
+
+        .signup input[type=text],
+        input[type=password] {
+            position: relative;
+            /* margin-right: 30px; */
+            padding: 12px 20px;
+
+            width: 90%;
+            border-radius: 20px;
+        }
+
+        .signup label {
+            position: relative;
+            float: left;
+            height: 10%;
+            width: 50%;
+            margin: 10px;
+            font-family: monospace;
+        }
+
+        .signup input[type=file] {
+
+            width: 100%;
+
+        }
+
+        .signup button {
+            position: relative;
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px auto;
+            left: 40%;
+            cursor: pointer;
+        }
+
+        .prompt {
+            display: none;
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .model {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%; 
+        }
+        .model .close
+        {
+            border:none transparent;
+            position: relative;
+            float: right;
+            padding: 10px 16px;
+           background: transparent;
+            border-radius: 55px;
+        }
+        .model h2
+        {
+            width: 60%;
+            padding: 20px 20px;
+            margin: auto;
+        }
+        .model .close:hover
+        {
+            background: tomato;
+        }
+        .model .sucess
+        {
+            position: relative;
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px auto;
+            left: 40%;
+            cursor: pointer;
+        }
+        .calc button {
+            position: relative;
+            float: left;
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 20%;
+            font-size: 18px;
+        }
+        span
+        {
+            color: red;
+            margin-left: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="calc">
+        <button id="login"> Login </button>
+    </div>
+    <br />
+
+    <div class="heading">
+        <h1 align=center>Sign UP</h1>
+    </div>
+    <div class="signup">
+        <label>first Name</label>
+        <input type="text" id="Fname" placeholder="first name" required>
+        <span id="FnameErr"></span>
+        <br />
+        <label>Last Name</label>
+        <input type="text" id="Lname" placeholder="last name" required>
+        <span id="LnameErr"></span>
+        <br />
+
+        <label>Profile picture</label>
+        <br />
+        <input type="file" id="profile" accept="image/*" required>
+        <span id="ProfileErr"></span>
+        <br />
+
+        <label>phone number </label>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <span id="PnumberErr"></span>
+        <br />
+
+        <label>Username</label>
+        <input type="text" id="Username" placeholder="UserName@xyz.com" required>
+        <span id="UnameErr"></span>
+        <br />
+        <label>Password</label>
+        <input type="password" id="password" placeholder="pass****" required>
+        <span id="passwordErr"></span>
+        <br />
+        <button id="submit"> Submit </button>
+        <br />
+        <h3 id="failmessgae" style="color:red"></h3>
+
+
+    </div>
+
+
+
+    <div class="prompt" id="prompt">
+        <div class="model">
+            <button class="close" id="exit"> X </button>
+            <h2>
+                Sucessfully Sign up.. please Log-in..
+            </h2>
+            <button  class="sucess" id="sucessSignUp">
+                Ok.
+            </button>
+        </div>
+
+    </div>
+</body>
+
+
+<script data-main="../build/signup/signup.js"   src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            margin-top: 30px;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .logoff {
+            /* position: absolute; */
+
+            float: right;
+        }
+
+        .logoff button {
+            width: 4rem;
+            height: 3rem;
+            background: coral;
+            border: none;
+            border-radius: 50%;
+        }
+
+        .calc button {
+            position: relative;
+            margin : 10px 20px;
+            float: left;
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 20%;
+            font-size: 18px;
+        }
+
+
+
+        .form
+        {
+            display: none;
+            position: absolute;
+            top:1px;
+            z-index: 1;
+            height: max-content;
+            width: 100%;
+            background: #6b6b6bbb;
+        }
+
+        .signup {
+            padding: 50px;
+            margin: 50px auto;
+            border: 2px solid cadetblue;
+            background: rgb(245, 243, 116);
+            border-radius: 25px;
+            height: auto;
+            width: 50%;
+        }
+
+        .signup input[type=text],
+        input[type=password] {
+            position: relative;
+            /* margin-right: 30px; */
+            padding: 12px 20px;
+
+            width: 90%;
+            border-radius: 20px;
+        }
+
+        .signup label {
+            position: relative;
+            float: left;
+            height: 10%;
+            width: 50%;
+            margin: 10px;
+            font-family: monospace;
+        }
+
+        .signup input[type=file] {
+
+            width: 100%;
+
+        }
+
+        .signup button {
+            /* position: absolute; */
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+            padding: 15px 32px;
+            text-align: center;
+            width:50%;
+            /* display: inline-block; */
+            font-size: 16px;
+            margin: 20px 2px auto;
+            /* left: 40%; */
+            cursor: pointer;
+            
+        }
+
+        .prompt {
+            display: none;
+            position: fixed;
+            /* Stay in place */
+            z-index: 2;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .model {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%; 
+        }
+        .model .close
+        {
+            
+            border:none transparent;
+            position: relative;
+            float: right;
+            padding: 10px 16px;
+           background: transparent;
+            border-radius: 55px;
+        }
+        .model h2
+        {
+            width: 60%;
+            padding: 20px 20px;
+            margin: auto;
+        }
+        .model .close:hover
+        {
+            background: tomato;
+        }
+        .model .sucess
+        {
+            position: relative;
+            width:auto;
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px auto;
+            left: 40%;
+            cursor: pointer;
+        }
+        span
+        {
+            color: red;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content" style="display:none">
+
+        <div class="calc">
+            <button id="calculator"> calculator </button>
+            <button id="AllUser"> All Users </button>
+        </div>
+        <div class="logoff">
+            <button id="logout">
+                logout
+            </button>
+        </div>
+        </br>
+    </br>
+        <h2 style="text-align:center">User Profile Card</h2>
+
+        <div class="card">
+            <button id="update">Update</button>
+            <img id="profileImage" src="../images/profile_logo.png" alt="user profile image" style="width:100%">
+            <h1 id="name">John Doe</h1>
+            <p class="title" id="role">CEO & Founder, Example</p>
+            <p id="Email">Harvard University</p>
+            <div style="margin: 24px 0;">
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+            </div>
+            <p><button id="phonenum">Contact</button></p>
+
+        </div>
+    </div>
+
+    <div class="form" id="updateform">
+       <div cass="model"><button class="close" id="updateclose"> X </button></div>
+       <div class="signup">
+        <label>first Name</label>
+        <input type="text" id="Fname" placeholder="first name" >
+        <span id="FnameErr"></span>
+        <br />
+        <label>Last Name</label>
+        <input type="text" id="Lname" placeholder="last name" >
+        <span id="LnameErr"></span>
+        <br />
+
+        <label>Profile picture</label>
+        <br />
+        <input type="file" id="profile" accept="image/*" >
+        <span id="ProfileErr"></span>
+        <br />
+
+        <label>phone number </label>
+        <input type="text" id="phone" placeholder="Phone Number" >
+        <span id="PnumberErr"></span>
+        <br />
+
+        <label>Username</label>
+        <input type="text" id="Username" placeholder="UserName@xyz.com"  disabled >
+        <span id="UnameErr"></span>
+        <br />
+        <label>Password</label>
+        <input type="password" id="password" placeholder="pass****" >
+        <span id="passwordErr"></span>
+        <br />
+        <button id="submit"> Submit </button>
+        <br />
+        <h3 id="failmessgae" style="color:red"></h3>
+
+
+    </div>
+
+
+
+
+        <div class="prompt" id="prompt">
+            <div class="model">
+                <h2>
+                    Sucessfully Update information...
+                </h2>
+                <button class="sucess" id="sucessSignUp">
+                    Ok.
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+<script data-main="../build/profile/profile.js" src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+
+
+
+</html>

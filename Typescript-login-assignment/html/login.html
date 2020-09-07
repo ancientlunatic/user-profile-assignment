@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <style>
+        *
+        {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            position: absolute;
+            width: 70%;
+            left: 15%;
+            height: auto;
+            background: #b1acac;
+            top: 10%;
+            border: none;
+            border-radius: 25px;
+            padding: 20px;
+        }
+
+        /* .container .portion {
+            
+        } */
+
+        .portion label 
+        {
+            position: relative;
+            width: 90%;
+            left :2%;
+            
+        }
+        .portion button {
+            position: relative;
+            background-color: #4d91a3;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            width: 80%;
+            left:10%;
+            border-radius: 25px;
+            /* margin:auto; */
+            border: none;
+            cursor: pointer;
+        }
+
+        .portion input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="portion">
+            <label>
+                UserName
+            </label>
+            <input id="username" type="text" placeholder="Enter your Username">
+            <br />
+            <label>
+                password
+            </label>
+            <input id="password" type="password" placeholder="Pass****">
+            <br />
+            <h2 id="failmessage" style="color:red"></h2>
+            <br />
+            <button id="login"> Log Me In </button>
+            <br />
+            <button id="signup">create new account </button>
+
+        </div>
+    </div>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js" data-main="../build/login.js"></script> -->
+    
+</body>
+<script data-main="../build/login/login.js"   src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+</html>

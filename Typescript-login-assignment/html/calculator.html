@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <style>
+      .container {
+         position: absolute;
+         top: 30%;
+         left: 30%;
+
+      }
+
+      input[type="button"] {
+         /* background-color:;  */
+         color: black;
+         border: solid black 2px;
+         width: 100%
+      }
+
+      input[type="text"] {
+         background-color: white;
+         border: solid black 2px;
+         /* width:100%  */
+      }
+
+      .logoff {
+         /* position: absolute; */
+
+         float: right;
+      }
+
+      .logoff button {
+         width: 4rem;
+         height: 3rem;
+         background: coral;
+         border: none;
+         border-radius: 50%;
+      }
+
+      .history {
+         position: relative;
+         top: 5rem;
+         right: 10rem;
+         background-color: lightblue;
+         width: 20rem;
+         height: 30rem;
+         overflow-y: auto;
+         float: right;
+         padding-right: 10px;
+      }
+      .profile button {
+            position: relative;
+            float: left;
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 20%;
+            font-size: 18px;
+        }
+     
+   </style>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+
+   <div class="profile">
+      <button id="profilePage">Profile</button>
+   </div>
+
+   <div class="logoff">
+      <button id="logout">
+         logout
+      </button>
+   </div>
+
+   <div class="container" id="calc" style="display: none;">
+      <h2 id="greet"></h2>
+      <h2 id="errormessage" style="color:red"></h2>
+      <table border="1">
+         <tr>
+            <td colspan="3"><input type="text" id="result" /></td>
+            <td><input type="button" value="c" id="clr" /> </td>
+         </tr>
+         <tr>
+            
+            <td><input type="button" class="vb" value="1" /> </td>
+            <td><input type="button" class="vb" value="2" /> </td>
+            <td><input type="button" class="vb" value="3" /> </td>
+            <td><input type="button" class="vb" value="/" /> </td>
+         </tr>
+         <tr>
+            <td><input type="button" class="vb" value="4" /> </td>
+            <td><input type="button" class="vb" value="5" /> </td>
+            <td><input type="button" class="vb" value="6" /> </td>
+            <td><input type="button" class="vb" value="-" /> </td>
+         </tr>
+         <tr>
+            <td><input type="button" class="vb" value="7" /> </td>
+            <td><input type="button" class="vb" value="8" /> </td>
+            <td><input type="button" class="vb" value="9" /> </td>
+            <td><input type="button" class="vb" value="+" /> </td>
+         </tr>
+         <tr>
+            <td><input type="button" class="vb" value="." /> </td>
+            <td><input type="button" class="vb" value="0" /> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" class="output" id="solve" value="=" /> </td>
+            <td><input type="button" class="vb" value="*" /> </td>
+         </tr>
+      </table>
+   </div>
+
+   <div class="history">
+      <h2 align=center>History</h2>
+      <ul id="record">
+        
+      </ul>
+   </div>
+   </body>
+   <script data-main="../build/calculator/calc.js"   src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+
+</html>

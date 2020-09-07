@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cardcontainer {
+            position: absolute;
+            top:4rem;
+            background: #e0dddd;
+            width: 60%;
+            margin:20px 40px; 
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 10px 10px 10px 15px;
+
+        }
+
+        .card {
+            background: #ffffff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.452);
+            transition: 0.3s;
+            margin:5px 5px;
+            width: 30%;
+            display: inline-block;
+            *display: inline;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.452);
+            width: 31%;
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+        .container button{
+            position: relative;
+            /* float: left; */
+            margin: 10px 0;
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            border-radius: 25px;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .history {
+            position: absolute;
+            top: 5rem;
+            right: 5rem;
+            background-color: lightblue;
+            width: 25%;
+            height:40rem;
+            overflow-y: auto;
+            float: right;
+            padding-right: 10px;
+        }
+        .calc button {
+            position: relative;
+            margin : 10px 20px;
+            float: left;
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 20%;
+            font-size: 18px;
+        }
+        .logoff {
+            /* position: absolute; */
+
+            float: right;
+        }
+
+        .logoff button {
+            width: 4rem;
+            height: 3rem;
+            background: coral;
+            border: none;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="calc">
+        <button id="calculator"> calculator </button>
+        <button id="profile"> profile </button>
+    </div>
+    <div class="logoff">
+        <button id="logout">
+            logout
+        </button>
+    </div>
+
+    <div class="cardcontainer" id="container">
+        <h2>Users</h2>
+        
+    </div>
+
+
+    <div class="history">
+        <h2 align=center>History</h2>
+        <h2 align=center id="userhistory"></h2>
+        <ul id="record">
+
+        </ul>
+    </div>
+    
+<script data-main="../build/AllUsers/AllUsers.js"   src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+</html>
